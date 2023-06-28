@@ -6,7 +6,7 @@ const copyright = document.createElement('p');
 copyright.innerHTML = `&copy Elena Baklanova ${thisYear}`;
 footer.appendChild(copyright);
 
-const skills = ['JavaScript', 'HTML'];
+const skills = ['JavaScript', 'HTML', 'CSS'];
 const skillsSection = document.getElementById('skills');
 skillsList = skillsSection.querySelector('ul');
 for (let i = 0; i < skills.length; i++){
