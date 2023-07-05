@@ -3,24 +3,37 @@
     <head>
         <title>Elena Baklanova project</title>
         <meta name="keywords" content="Elena CTD projects fenrir">
+        <meta name = "viewport" content = "width=device-width, initial-scale=1">
         <link rel = "stylesheet" href = "css/index.css">
     </head>
     <body>
+        <header>
+            <nav class = "container">
+                <a href = "#about">About</a>
+                <a href = "#experience">Experience</a>
+                <a href = "#skills">Skills</a>
+                <a href = "#connect">Connect</a>
+            </nav>
+        </header>
             <h1>Elena Baklanova</h1>
+            <img class="picture" src = "file:///home/vboxuser/Downloads/IMG-1206.jpg" alt="Hanging rock Mountain">
+            <img class="picture" src = "file:///home/vboxuser/Desktop/images/IMG_8513.jpg" alt="Overlook at Mount Mitchell">
+            <img class="picture" src = "file:///home/vboxuser/Downloads/IMG_3826.jpg" alt="Pilot Mountain">
 
         <section>
             <h2>About</h2>
+            
      
-                <p class = "about">Hello! My name is Elena. Welcome to my first webpage. I live in North Carolina. 
-                I am passionate about computer science and I want to become a front-end developer.</p>
-
+                <p id = "about">Hello! My name is Elena. Welcome to my first webpage. I live in North Carolina and I love it's nature very much. 
+                I am passionate about computer science and I want to become a front-end developer.<br>
+                
         </section>
         
         <section>
             <h2>Experience</h2>
                 <p>
                     <ul>
-                        <li class = "experience">Current student at Code The Dream.</li>
+                        <li id = "experience">Current student at Code The Dream.</li>
                     </ul>
                 </p>
 
@@ -34,22 +47,21 @@
         <section>
             <h2>Connect</h2>
         
-                <p class = "connect">https://github.com/Elena-277</p>
+                <p id = "connect">https://github.com/Elena-277</p>
         </section>
-        <section id = "messageForm"> 
-            <h2>Leave a Message</h2>
-            <form id = "leave_message" name = "leave_message">
-                <label for = "name">Name</label><br>
-                <input id = "name" type = "text" name = "usersName" required = "true"><br>
+        <section class = "messageForm"> 
+            <h2 class = "grid-item">Leave a Message</h2>
+                <form id = "leave_message" name = "leave_message">
+                    <label for = "name">Name</label><br>
+                    <input id = "name" type = "text" name = "usersName" required = "true"><br>
 
-                <label for = "email">Email</label><br>
-                <input id = "email" type = "email" name = "usersEmail" required = "true"><br>
+                    <label for = "email">Email</label><br>
+                    <input id = "email" type = "email" name = "usersEmail" required = "true"><br>
 
-                <label for = "message">Message</label><br>                
-                <textarea id = "message" name = "usersMessage" required = "true"></textarea><br>
-                
-                <button type = "submit">Submit</button>
-            </form>
+                    <label for = "message">Message</label><br>                
+                    <textarea id = "message" name = "usersMessage" required = "true"></textarea><br>
+                    <button type = "submit">Submit</button>
+                </form>
         </section>
 
         <section id = "messages">
