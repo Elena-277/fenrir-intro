@@ -2,6 +2,7 @@ body{
     background-color: rgb(228, 235, 235);
     color: rgb(11, 11, 14);
     font-family: "Halvetica", sans-serif;
+    margin: 20px;
 }
 
 h1 {
@@ -9,11 +10,11 @@ h1 {
     font-size: 35px;
     font-weight: bold;
     margin: 40px;
-    color: rgb(87, 74, 64);
+    color: rgb(90, 80, 72);
     text-align: center;
 }
 h2 {
-    background-color: rgb(247, 248, 245);
+    background-color: rgb(224, 224, 197);
     font-family: "Halvetica", sans-serif;
     font-size: large;
     font-weight: 300;
@@ -22,32 +23,35 @@ h2 {
     padding: 10px;
     height: 25px;
     width: 150px;
-    border: 3px solid rgb(149, 155, 139);
+    border: 3px solid rgb(117, 124, 105);
     border-radius: 10px;
     margin: 30px;
+    margin-left: 30px;
 }
 
 ul li{
     display: inline-block;
-    padding: 10px;
+    padding: 5px;
     height: 25px;
     width: 100px;
-    border: 3px solid rgb(149, 155, 139);
+    border: 3px solid rgb(117, 124, 105);
     border-radius: 10px;
-    margin: 10px;
+    margin: 3px;
+    margin-left: 50px;
     text-align: center;
+   
 }
 #about {
-    background-color: rgb(241, 242, 243);
     text-align: start;
     font-family: "Halvetica", sans-serif;
     font-size: larger;
     padding: 10px;
-    height: 150px;
-    width: 300px;
-    border: 3px solid rgb(159, 179, 187);
+    height: 110px;
+    width: 400px;
+    border: 3px solid rgb(117, 124, 105);
     border-radius: 10px;
     margin: 30px;
+    margin-left: 30px;
 }
 #connect {
     text-align: center;
@@ -55,9 +59,10 @@ ul li{
     padding: 10px;
     height: 30px;
     width: 250px;
-    border: 3px solid rgb(149, 155, 139);
+    border: 3px solid rgb(117, 124, 105);
     border-radius: 10px;
     margin: 30px;
+    margin-left: 30px;
 }
 label {
     font-size: larger;
@@ -85,10 +90,12 @@ button {
     padding: 10px;
     height: 25px;
     width: 280px;
-    border: 3px solid rgb(149, 155, 139);
+    border: 3px solid rgb(117, 124, 105);
     border-radius: 10px;
     margin: 10px;
     flex-direction: column;
+    
+   
 }
 footer {
     background-color: rgb(208, 219, 226);
@@ -101,18 +108,27 @@ footer {
 .container{
     display: flex;
     justify-content: space-between;
-    margin: 10px;
+    margin: 20px;
+    margin-left: 100px;
     padding: 10px;
-    width: 300px;
-    height: 25px;
-    border-radius: 10px;
-    align-items: center;
+    width: 350px;
+    height: 35px;
+    align-items: start;
+    font-family: "Halvetica", sans-serif;
+    font-size: large;
 }
 .messageForm {
     display: grid;
+    justify-content: space-between;
     gap: 20px;
     margin: 10px;
+    margin-left: 20px;
 }
+.grid-item{
+    margin-left: 10px;
+}
+
+
 
 @media (max-width: 2000px) {
     body{
@@ -121,39 +137,73 @@ footer {
     }
     .picture {
         display: inline-block;
-        width: 340px;
+        width: 320px;
         margin: 5px
     }
     
 }
 @media (max-width: 1100px) {
     body {
-            background-color: rgb(226, 238, 245);
+            background-color: rgb(234, 245, 255);
         }
     .picture {
-            display: flex;
-            flex-direction: column;
-            width: 250px;
+            display: inline-block;
+            width: 200px;
             margin: 5px;
         }
+    h2{
+        background-color: rgb(195, 200, 211);
+        border: 3px solid rgb(71, 80, 117);
+    }
+    #about{
+        border: 3px solid rgb(71, 80, 117);
+    }
+    #experience{
+        border: 3px solid rgb(71, 80, 117);
+    }
+    ul li{
+        border: 3px solid rgb(71, 80, 117);
+    }
+    #connect{
+        border: 3px solid rgb(71, 80, 117);
+    }    
 }
       
 @media (max-width: 700px){
     ul li {
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        justify-content: start;
+        border: 3px solid rgb(117, 71, 81);
+        
     }
     .container {
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        justify-content: space-between;
     }
     body {
-        background-color: rgb(242, 243, 235);
+        background-color: rgb(243, 235, 238);
     }
-    .picture {
-        display: flex;
+    .picture{
+        display:flex;
         flex-direction: column;
         width: 150px;
-        margin: 5px;
+        margin: 10px;
+        margin-left: 50px;
     }
+   
+    #about{
+        border: 3px solid rgb(117, 71, 81);
+        width: 250px;
+        height: 200px;
+    }
+    #experience{
+        border: 3px solid rgb(117, 71, 81);
+    }
+    #connect{
+        border: 3px solid rgb(117, 71, 81);
+    }
+    h2{
+        background-color: rgb(207, 195, 199);
+        border: 3px solid rgb(117, 71, 81);
+    }    
 }
