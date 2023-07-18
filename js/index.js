@@ -45,5 +45,27 @@ messageForm.addEventListener("submit", function(event) {
     messageList.appendChild(newMessage);
     
     messageForm.reset();
-});    
+});  
+
+const githubRequest = new XMLHttpRequest();
+githubRequest.open('GET', 'https://api.github.com/users/Elena-277/repos');
+githubRequest.send();
+githubRequest.addEventListener('load', function(event){
+    const repositories = JSON.parse(this.response);
+    const projectSection = document.getElementById("projects");
+    const projectList = projectSection.querySelector("ul");
+    for (let i = 0; i < repositories.length; i++){
+        const project = document.createElement("li"); 
+        project.setAttribute('id','repoList');
+        project.innerHTML = `<a href = ${repositories[i].html_url}>${repositories[i].name}</a><br>
+        updated: ${repositories[i].updated_at}`;
+        projectList.appendChild(project);
+        
+
+    }
+
+    
+})
+
+
     
