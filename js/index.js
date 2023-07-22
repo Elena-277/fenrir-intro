@@ -47,11 +47,12 @@ messageForm.addEventListener("submit", function(event) {
     messageForm.reset();
 });  
 
-const githubRequest = new XMLHttpRequest();
-githubRequest.open('GET', 'https://api.github.com/users/Elena-277/repos');
-githubRequest.send();
-githubRequest.addEventListener('load', function(event){
-    const repositories = JSON.parse(this.response);
+
+fetch('https://api.github.com/users/Elena-277/repos')
+.then(response =>response.json())
+.then(data => insertLinks(data))
+
+function insertLinks(repositories) {
     const projectSection = document.getElementById("projects");
     const projectList = projectSection.querySelector("ul");
     for (let i = 0; i < repositories.length; i++){
@@ -60,12 +61,7 @@ githubRequest.addEventListener('load', function(event){
         project.innerHTML = `<a href = ${repositories[i].html_url}>${repositories[i].name}</a><br>
         updated: ${repositories[i].updated_at}`;
         projectList.appendChild(project);
-        
-
     }
-
-    
-})
-
+}
 
     
