@@ -1,36 +1,54 @@
 * {
     box-sizing: border-box;
-    color: rgb(15, 75, 29);
+    color: rgb(19, 68, 31);
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     font-size: x-large;
 }
 
 body {
-    background-image: linear-gradient(rgb(167, 212, 255), rgb(226, 255, 199), rgb(182, 199, 247), rgb(228, 255, 152));
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    margin: 1em;
+    background:
+radial-gradient(circle at 0% 50%, rgba(96, 16, 48, 0) 9px, rgb(184, 204, 182) 10px, rgba(96, 16, 48, 0) 11px) 0px 10px,
+radial-gradient(at 100% 100%,      rgba(96, 16, 48, 0) 9px, rgb(120, 134, 117) 10px, rgba(96, 16, 48, 0) 11px),
+rgb(209, 202, 178);
+background-size: 20px 20px;
 }
 h1 {
     color: rgb(12, 71, 27);
     font-size: xx-large;
     text-align: center;
     padding: 10px;
+    background-color: rgb(209, 202, 178);
+    
+
 } 
 h2 {
     font-weight: bold;
 }
-#skills li, .menu li, #projects li {
+.menu li, #projects li, #experience {
     border: 3px solid gray;
     list-style: none;
     margin: 10px;
     padding: 20px;
-    height: 70px;
+    height: 85px;
+    width: 300px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: rgb(209, 202, 178);
+}
+#skills li {
+    border: 3px solid gray;
+    list-style: none;
+    margin: 10px;
+    padding: 20px;
+    height: 65px;
     width: 200px;
     text-align: center;
-    border-radius: 5px
+    border-radius: 5px;
+    background-color: rgb(209, 202, 178);
+}
+#messages li {
+    list-style: none;
 }
 .menu {
     display: flex;
@@ -40,6 +58,12 @@ h2 {
 }
 .menu li {
     background-image: linear-gradient(gray, white);
+}
+.menu li :hover {
+    color: rgb(254, 255, 212);
+}
+#projects li :hover {
+    color: rgb(254, 255, 212);
 }
 footer {
     background-color: rgb(204, 203, 203);
@@ -56,25 +80,34 @@ footer {
 #skills li{
     display: inline-block;
 }
-#about {
+#about p{
+    background-color: rgb(209, 202, 178);
     display: flex;
     flex-direction: column;
-    justify-content: center;
     text-align: center;
-    margin: 20px;
+    margin-left: 300px;
+    margin-right: 300px;
     padding: 20px;
+    
+    align-content: center;
 }
 .img_div {
     justify-content: center;
 }
+.picture {
+    border: 5px solid rgb(12, 71, 27);
+    border-radius: 10px;
+
+}
+    
 #name {
-    border: 5px solid rgb(153, 153, 163);
+    border: 4px solid rgb(153, 153, 163);
 }
 #email {
-    border: 5px solid rgb(153, 153, 163);
+    border: 4px solid rgb(153, 153, 163);
 }
 #message {
-    border: 5px solid rgb(153, 153, 163);
+    border: 4px solid rgb(153, 153, 163);
 }
 #messages ul {
     display: flex;
@@ -85,12 +118,21 @@ footer {
 #messages button {
     margin-left: 5px;
 }
-
+button {
+    background-image: linear-gradient(white, gray);
+    border: 5px solid gray;
+    border-radius: 5px;
+}
+input, #message {
+    color: black;
+    font-size: x-large;
+    
+}
 
 @media (max-width: 4000px) {
     .picture{
         align-items: center;
-        width: 300px;
+        width: 350px;
     }
     .img_div {
         display: flex;
@@ -98,21 +140,56 @@ footer {
     }
 }
 @media (max-width: 1100px) {
+    * {
+        font-size: large;
+    }
+    .menu li {
+        height: 50px;
+        width: 250px;
+
+    }
     .picture {
         width: 200px;
+    }
+    #about {
+        display: flex;
+        justify-content: space-around;
+        
+        margin-left: 2px;
+        margin-right: 2px;
+    }
+    #about p {
+        width: 400px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .menu {
+        flex-direction: column;
+        align-items: center;
     }
     
 }
 @media (max-width: 700px) {
     
-    #projects li {
+    
+    #projects li, #experience  {
         width: 410px;
-        height: 130px;
+        height: 110px;
     }
     
-    .menu, #skills ul, .img_div, h1, #about {
+    .menu, #skills ul, .img_div, h1{
         display: flex;
         flex-direction: column;
         align-content: space-between;
     }
+    #about {
+        display: flex;
+        flex-direction: column;
+    }
+    .picture {
+        width: 150px;
+    }
+
+   
+    
 }
